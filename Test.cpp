@@ -164,7 +164,7 @@ TEST_CASE("Test replacement of o and u")
     /*6*/ CHECK(find(text1, "yuu") == string("you"));
     /*7*/ CHECK(find(text1, "yoo") == string("you"));
     /*8*/ CHECK(find(text1, "yuo") == string("you"));
-    /*9*/ CHECK(find(text1, "") == string(""));
+    /*9*/ CHECK(find(text1, "UOUO") == string("uouo"));
     /*10*/ CHECK(find(text2, "o") == string("u"));
     /*11*/ CHECK(find(text2, "uooooouuo") == string("uoooouuuo"));
     /*12*/ CHECK(find(text2, "ulive") == string("olive"));
