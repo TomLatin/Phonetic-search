@@ -54,7 +54,7 @@ bool EqualWords(string wordFromText,string word,int size)
     for (int i = 0; i <size ; ++i)
     {
         if(wordFromText[i]==word[i]) continue;
-        else if((wordFromText[i]==word[i]+('a'-'A')) || (wordFromText[i]==word[i]+('A'-'a')) )  continue;
+        else if((wordFromText[i]==word[i]+('a'-'A')) || (wordFromText[i]+('A'-'a')==word[i]) )  continue;
         else if((wordFromText[i]=='v' && word[i]=='w') || (wordFromText[i]=='w' && word[i]=='v'))  continue;
         else if((wordFromText[i]=='b' && ((word[i]=='f')||(word[i]=='p')) )|| (wordFromText[i]=='f' && ((word[i]=='b' || word[i]=='p' ))) || (wordFromText[i]=='p' && ((word[i]=='b' || word[i]=='f' ) )))   continue;
         else if((wordFromText[i]=='g' && word[i]=='j' )||( wordFromText[i]=='j' && word[i]=='g'  ))  continue;
