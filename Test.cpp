@@ -19,8 +19,8 @@ TEST_CASE("Words without confusion") {
     /*11*/   CHECK(find(text, "electroencephalographically") == string("electroencephalographically"));
     /*12*/   CHECK(find(text, "semihemidemisemihemidemisemihemidemisemiquaver") == string("semihemidemisemihemidemisemihemidemisemiquaver"));
     /*13*/   CHECK(find(text, "pseudopseudohypoparathyroidism") == string("pseudopseudohypoparathyroidism"));
-    /*14*/   CHECK(find(text, " Chrononhotonthologos") == string(" Chrononhotonthologos"));
-    /*15*/   CHECK(find(text, " tobacco") == string(" tobacco"));
+    /*14*/   CHECK(find(text, "Chrononhotonthologos") == string("Chrononhotonthologos"));
+    /*15*/   CHECK(find(text, "tobacco") == string("tobacco"));
 }
 
 TEST_CASE("Test replacement of v and w & replacement of w and v")
@@ -40,8 +40,8 @@ TEST_CASE("Test replacement of v and w & replacement of w and v")
     /*11*/ CHECK(find(textWtoV, "viwisectionists") == string("vivisectionists"));
     /*12*/ CHECK(find(textWtoV, "vwvw") == string("wvwv"));
     /*13*/ CHECK(find(textWtoV, "wiwi") == string("viwi"));
-    /*14*/ CHECK(find(textWtoV, "wwwwwv ") == string("vvvvw "));
-    /*15*/CHECK(find(textWtoV, " valid") == string(" walid"));
+    /*14*/ CHECK(find(textWtoV, "wwwwv") == string("vvvvw"));
+    /*15*/CHECK(find(textWtoV, "valid") == string("walid"));
 }
 
 TEST_CASE("Test replacement of b and f and p ")
@@ -51,7 +51,7 @@ TEST_CASE("Test replacement of b and f and p ")
     /*1*/ CHECK(find(text1, "f") == string("b"));
     /*2*/ CHECK(find(text1, "p") == string("b"));
     /*3*/ CHECK(find(text1, "bafap") == string("papaf"));
-    /*4*/ CHECK(find(text1, "barbor") == string("pafor"));
+    /*4*/ CHECK(find(text1, "bafor") == string("pafor"));
     /*5*/ CHECK(find(text1, "papa") == string("baba"));
     /*6*/ CHECK(find(text1, "fuild") == string("build"));
     /*7*/ CHECK(find(text1, "poaerp") == string("boaerp"));
@@ -61,8 +61,8 @@ TEST_CASE("Test replacement of b and f and p ")
     /*11*/ CHECK(find(text2, "f") == string("p"));
     /*12*/ CHECK(find(text2, "bix") == string("fix"));
     /*13*/ CHECK(find(text2, "pix") == string("fix"));
-    /*14*/ CHECK(find(text2, " falabal") == string(" falafal"));
-    /*15*/CHECK(find(text2, " palabal") == string(" falafal"));
+    /*14*/ CHECK(find(text2, "falabal") == string("falafal"));
+    /*15*/CHECK(find(text2, "palabal") == string("falafal"));
 }
 
 TEST_CASE("Test replacement of g and j")
@@ -93,7 +93,7 @@ TEST_CASE("Test replacement of c and k and q")
     /*1*/ CHECK(find(text1, "c") == string("q"));
     /*2*/ CHECK(find(text1, "k") == string("q"));
     /*3*/ CHECK(find(text1, "ckq") == string("qck"));
-    /*4*/ CHECK(find(text1, "cqk") == string("kcq"));
+    /*4*/ CHECK(find(text1, "cqk") == string("qck"));
     /*5*/ CHECK(find(text1, "qaca") == string("kaka"));
     /*6*/ CHECK(find(text1, "caqa") == string("kaka"));
     /*7*/ CHECK(find(text1, "karacov") == string("karaqov"));
@@ -104,7 +104,7 @@ TEST_CASE("Test replacement of c and k and q")
     /*12*/ CHECK(find(text2, "kooqoo") == string("kookoo"));
     /*13*/ CHECK(find(text2, "qlita") == string("klita"));
     /*14*/ CHECK(find(text2, "coqoriko") == string("kokoriko"));
-    /*15*/CHECK(find(text2, "koocoo ") == string("kookoo"));
+    /*15*/CHECK(find(text2, "koocoo") == string("kookoo"));
 }
 
 
@@ -126,7 +126,7 @@ TEST_CASE("Test replacement of s and z")
     /*12*/ CHECK(find(text2, "zosoulsz") == string("zozoulsz"));
     /*13*/ CHECK(find(text2, "zozoulzs") == string("zozoulsz"));
     /*14*/ CHECK(find(text2, "zoranzd ") == string("zoransd"));
-    /*15*/CHECK(find(text2, "soranzd") == string("zoransd"));
+    /*15*/CHECK(find(text2, "zoranzd") == string("zoransd"));
 }
 
 
@@ -166,7 +166,7 @@ TEST_CASE("Test replacement of o and u")
     /*8*/ CHECK(find(text1, "yuo") == string("you"));
     /*9*/ CHECK(find(text1, "UOUO") == string("uouo"));
     /*10*/ CHECK(find(text2, "o") == string("u"));
-    /*11*/ CHECK(find(text2, "uooooouuo") == string("uoooouuuo"));
+    /*11*/ CHECK(find(text2, "uooouuuuo") == string("uoooouuuo"));
     /*12*/ CHECK(find(text2, "ulive") == string("olive"));
     /*13*/ CHECK(find(text2, "huolugdou") == string("hoolugdou"));
     /*14*/ CHECK(find(text2, "houlugduu") == string("hoolugdou"));
@@ -202,7 +202,7 @@ TEST_CASE("Test replacement of lower-case and upper-case") {
     /*7*/ CHECK(find(text, "YiiIIiYiIiy") == string("yiiIIiyiIiy"));
     /*8*/  CHECK(find(text, "YOU") == string("you"));
     /*9*/ CHECK(find(text, "Daridodo") == string("daridodo"));
-    /*10*/ CHECK(find(text, "dariTodo") == string("daridodo"));
+    /*10*/ CHECK(find(text, "darIdodo") == string("daridodo"));
     /*11*/  CHECK(find(text, "semihemidemisemihemiDemiZemihemYdemisemYquawer") == string("semihemidemisemihemiDemisemihemidemisemiquawer"));
     /*12*/ CHECK(find(text, "XXX") == string("xxx"));
     /*13*/ CHECK(find(text, "xXx") == string("xxx"));
