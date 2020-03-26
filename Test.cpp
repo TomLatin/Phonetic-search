@@ -125,8 +125,8 @@ TEST_CASE("Test replacement of s and z")
     /*11*/ CHECK(find(text2, "sosoulss") == string("zozoulsz"));
     /*12*/ CHECK(find(text2, "zosoulsz") == string("zozoulsz"));
     /*13*/ CHECK(find(text2, "zozoulzs") == string("zozoulsz"));
-    /*14*/ CHECK(find(text2, "zoranzd ") == string("zoransd"));
-    /*15*/CHECK(find(text2, "zoranzd") == string("zoransd"));
+    /*14*/ CHECK(find(text2, "zoranzd") == string("zoransd"));
+    /*15*/CHECK(find(text2, "soransd") == string("zoransd"));
 }
 
 
@@ -166,7 +166,7 @@ TEST_CASE("Test replacement of o and u")
     /*8*/ CHECK(find(text1, "yuo") == string("you"));
     /*9*/ CHECK(find(text1, "UOUO") == string("uouo"));
     /*10*/ CHECK(find(text2, "o") == string("u"));
-    /*11*/ CHECK(find(text2, "uooouuuuo") == string("uoooouuuo"));
+    /*11*/ CHECK(find(text2, "hoolugdoo") == string("hoolugdou"));
     /*12*/ CHECK(find(text2, "ulive") == string("olive"));
     /*13*/ CHECK(find(text2, "huolugdou") == string("hoolugdou"));
     /*14*/ CHECK(find(text2, "houlugduu") == string("hoolugdou"));
@@ -187,7 +187,7 @@ TEST_CASE("Test replacement of i and y")
     /*7*/ CHECK(find(text1, "iayr") == string("yair"));
     /*8*/ CHECK(find(text1, "iotem") == string("yotem"));
     /*9*/ CHECK(find(text1, "yoayv") == string("yoaiv"));
-    /*10*/ CHECK(find(text2, "y") == string("i "));
+    /*10*/ CHECK(find(text2, "y") == string("i"));
     /*11*/ CHECK(find(text2, "iiutei") == string("iyutei"));
 }
 

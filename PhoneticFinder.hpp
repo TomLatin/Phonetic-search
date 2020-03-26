@@ -9,4 +9,5 @@ namespace phonetic {
 }
 bool cheakOneWord(string word);
 bool EqualWords(string wordFromText,string word,int size);
+string toLowewCase(string word);
 
