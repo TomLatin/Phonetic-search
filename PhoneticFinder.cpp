@@ -44,7 +44,7 @@ string phonetic::find(string text, string word) {
     }
 }
 
-
+/*Checks whether two words are equal according to the assignment requirements*/
 bool EqualWords(string wordFromText,string wordOriginal,int size)
 {
     for (int i = 0; i <size ; ++i)
@@ -57,6 +57,8 @@ bool EqualWords(string wordFromText,string wordOriginal,int size)
     return true;
 }
 
+/*The function checks whether 2 characters are equal by checking the index in an auxiliary array, if the two indexes
+  have the same number of characters equal to the criteria defined in the assignment*/
 bool EqualChar(char chFromText,char chOriginal )
 {
     int index1,index2;
@@ -89,7 +91,7 @@ bool EqualChar(char chFromText,char chOriginal )
     }
 }
 
-
+/*Turns each word into lowercase only*/
 string toLowewCase(string word)
 {
     string temp="";
