@@ -1,5 +1,18 @@
 #include "PhoneticFinder.hpp"
 
+/*
+   can mix in the letters:
+    v, w
+    b, f, p
+    g, j
+    c, k, q
+    s, z
+    d, t
+    o, u
+    i, y
+    Each number in the array represents a set of letters that can be exchanged.
+    index 0 represents the letter a index 1 represents the lettergit add b שnd so on
+ */
 int arrABC[]={1,2,3,4,5,2,6,7,8,6,3,9,10,11,12,2,3,13,14,4,12,15,15,16,8,14};
 
 string phonetic::find(string text, string word) {
@@ -31,19 +44,7 @@ string phonetic::find(string text, string word) {
     }
 }
 
-/*
-   can mix in the letters:
-    v, w
-    b, f, p
-    g, j
-    c, k, q
-    s, z
-    d, t
-    o, u
-    i, y
 
-    and also can mix in big letter to little letter
- */
 bool EqualWords(string wordFromText,string wordOriginal,int size)
 {
     for (int i = 0; i <size ; ++i)
