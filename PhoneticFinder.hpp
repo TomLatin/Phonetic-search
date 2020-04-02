@@ -8,6 +8,7 @@ namespace phonetic {
     string find(string text, string word);
 }
 //private function
+bool checkOneWord(string word);
 bool EqualWords(string wordFromText,string word,int size);
 bool EqualChar(char chFromText,char chOriginal );
 string toLowewCase(string word);

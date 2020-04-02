@@ -18,7 +18,7 @@ int arrABC[]={1,2,3,4,5,2,6,7,8,6,3,9,10,11,12,2,3,13,14,4,12,15,15,16,8,14};
 string phonetic::find(string text, string word) {
 
     //check if the word is legal i.e there is not space in the word like "a t" or it empty string i.e "" .
-    if(word=="")
+    if(word==""||text=="" || !checkOneWord(word))
     {
         throw std::runtime_error {"The "+ word+" is invalid word"};
     }
@@ -42,6 +42,29 @@ string phonetic::find(string text, string word) {
         }
         throw std::runtime_error {word+" is not a full word in the sentence"};
     }
+}
+
+bool checkOneWord(string word)
+{
+    int i=0,n=word.size();
+
+    //Lowers all profits from the right and left
+    while (word[i]==' '|| word[n]==' ')
+    {
+        if(word[i]==' ') i++;
+        if(word[n]==' ') n--;
+    }
+
+    //Checks whether there are spaces inside the word so we return false
+    for (int j=i;j<n;j++)
+    {
+        if(word[j]==' ')
+        {
+            return false;
+        }
+    }
+    //the word is OK
+    return true;
 }
 
 /*Checks whether two words are equal according to the assignment requirements*/
